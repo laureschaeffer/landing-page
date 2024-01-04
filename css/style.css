@@ -15,12 +15,19 @@ header{
     vertical-align: top;
     padding: 1% 1% 5% 1%;
     display: flex;
-    gap: 20px;
     color: white;
     justify-content: space-around;
     align-items: center;
 
 }
+nav ul{
+    display: flex;
+}
+nav li{
+    padding: 0 1%;
+    flex-grow: 1;
+}
+
 .network{
     display: flex;
     justify-content: center;
@@ -52,21 +59,46 @@ li {
     width: 100%;
     height: 100%;
     padding: 2% 3%;
+    gap: 20px;
 }
 
 #home-startup{
     flex: 1;
-    font-size: 1.2em;
-}
-#home-startup h2, p{
+    font-size: 1em;
     text-align: left;
 }
+#home-startup h2{
+    font-size: 2.5em;
+}
+/* ------------------------SUBSCRIBE-------------------------- */
 
+input[type="text"]{
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border: none;
+    /* outline: none; */
+    padding: 1% 1%;
+    border-radius: 25px 25px 25px 25px;
+
+}
+input[type="submit"]{
+    position: absolute;
+    background: #1294b8 ;
+    border: none;
+    padding: 1% 1%;
+    border-radius: 25px 25px 25px 25px;
+}
+
+.subscribe, h2, p{
+    padding: 0% 2%;
+}
+
+/* ------------------ILLUSTRATION-------------------------------------- */
 #home-illustration{
-    flex: 1;
+    flex: 2;
 }
 
 #home-illustration img{
-    width: 400px;
+    width: 300px;
 }
-
