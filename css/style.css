@@ -12,7 +12,7 @@
 }
 /* -------------------------HEADER------------------------------ */
 header{
-    vertical-align: top;
+    width: 100%;
     padding: 1% 1% 5% 1%;
     display: flex;
     color: white;
@@ -24,8 +24,7 @@ nav ul{
     display: flex;
 }
 nav li{
-    padding: 0 1%;
-    flex-grow: 1;
+    padding: 0 2%;
 }
 
 .network{
@@ -33,17 +32,17 @@ nav li{
     justify-content: center;
     padding: 0% 1%;
 }
+.network a{
+    padding: 0 15%;
 
-.network i{
-    padding: 0% 10%;
 }
-
 ul {
     list-style-type: none;
 }
-ul a {
+ul a, .network i {
     text-decoration: none;
     color: white;
+    opacity: 1;
 }
 
 li {
@@ -59,40 +58,42 @@ li {
     width: 100%;
     height: 100%;
     padding: 2% 3%;
-    gap: 20px;
+    gap: 100px;
 }
 
 #home-startup{
     flex: 1;
     font-size: 1em;
-    text-align: left;
+    padding: 0% 2%;
 }
 #home-startup h2{
     font-size: 2.5em;
 }
-/* ------------------------SUBSCRIBE-------------------------- */
 
+/* ------------------------SUBSCRIBE-------------------------- */
+.subscribe {
+    opacity: 0.8;
+}
 input[type="text"]{
     position: relative;
     width: 100%;
+    height: 35px;
     background: #fff;
     border: none;
-    /* outline: none; */
-    padding: 1% 1%;
+    padding: 0 0 0 3%;
     border-radius: 25px 25px 25px 25px;
 
 }
 input[type="submit"]{
     position: absolute;
+    left: 26%;
     background: #1294b8 ;
+    color: white;
     border: none;
-    padding: 1% 1%;
+    padding: 0.5% 0.5%;
     border-radius: 25px 25px 25px 25px;
 }
 
-.subscribe, h2, p{
-    padding: 0% 2%;
-}
 
 /* ------------------ILLUSTRATION-------------------------------------- */
 #home-illustration{
@@ -100,5 +101,16 @@ input[type="submit"]{
 }
 
 #home-illustration img{
-    width: 300px;
+    width: 80%;
+}
+
+
+/* -------------------effets visuels-------------------------- */
+
+.network i:hover, li:hover, input[type='submit']:hover {
+    opacity: 0.5;
+}
+
+.network i, li, input {
+    transition: 0.5s;
 }
