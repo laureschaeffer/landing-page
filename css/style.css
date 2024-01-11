@@ -139,7 +139,7 @@ input[type="submit"]{
     gap: 20px;
 }
 
-.card{
+.products-card{
     background: radial-gradient(rgb(139, 195, 245), #1294b8);
     width: 300px;
     border-radius: 10px;
@@ -152,7 +152,7 @@ input[type="submit"]{
     text-align: center;
 }
 
-.logo {
+.products-logo{ 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,10 +162,13 @@ input[type="submit"]{
     color: white;
 }
 
-.card:hover{
+.products-card:hover{
     transform: translateY(-10px);
 }
 
 #products-features p{
     color: grey;
 }
+
+/* ------------------------------------troisième section EQUIPE----------------------- */
+
