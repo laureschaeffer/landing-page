@@ -127,7 +127,6 @@ input[type="submit"]{
 #products-features{
     text-align: center;
     padding: 3% 5%;
-
 }
 
 
@@ -170,5 +169,76 @@ input[type="submit"]{
     color: grey;
 }
 
-/* ------------------------------------troisième section EQUIPE----------------------- */
+/* --------------------------------------------------------troisième section EQUIPE---------------------------------- */
 
+#team-description{
+    text-align: center;
+    padding: 1% 25%;
+}
+#team-description h3{
+    padding: 2% 0;
+}
+
+#team{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3% 0;
+}
+
+
+/* Je mets le card header en relative pour qu'il devienne le parent de la class team-network */
+.card-header{
+    position: relative;
+    overflow: hidden;
+}
+
+.team-network{
+    position: absolute;
+    top: 0;
+    left: -50px;
+    transition: 1s;
+}
+/* top 0 et left -50 pour que les icones se trouvent à coté de l'image, elles disparaissent grace au overflow hidden du parent */
+
+
+.team-picture img{
+    padding: 5% 5%;
+    width: 200px;
+    border-radius: 50%;
+    filter: grayscale(1);
+    transition: 1s;
+}
+
+
+.team-card p, .team-card h4, .team-card h5{
+    text-align: center;
+}
+
+.card-header>p, #team-description>p, h5+p{
+    opacity: 0.5;
+}
+
+.team-network a{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+    /* effets sur les photos et sur les icones des reseaux sociaux */
+
+.team-picture:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0);
+}
+
+.card-header:hover .team-network{
+    left: 5px;
+    top: 100px;
+}
