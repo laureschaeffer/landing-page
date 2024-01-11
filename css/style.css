@@ -122,11 +122,11 @@ input[type="submit"]{
     transition: 0.5s;
 }
 
-/* -------------------------------------deuxième section------------------------ */
+/* -------------------------------------deuxième section PRODUCTS FAETURES------------------------ */
 
 #products-features{
     text-align: center;
-    padding: 3% 5%;
+    padding: 10% 5%;
 }
 
 
@@ -136,9 +136,11 @@ input[type="submit"]{
     justify-content: center ;
     align-items: center;
     gap: 20px;
+    padding: 0 0 10% 0;
 }
 
 .products-card{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 15px;
     background: radial-gradient(rgb(139, 195, 245), #1294b8);
     width: 300px;
     border-radius: 10px;
@@ -187,24 +189,25 @@ input[type="submit"]{
 }
 
 
-/* Je mets le card header en relative pour qu'il devienne le parent de la class team-network */
-.card-header{
+/* Je mets la team-card en relative pour qu'il devienne le parent de la class team-network */
+.team-card{
     position: relative;
     overflow: hidden;
 }
 
 .team-network{
-    position: absolute;
-    top: 0;
+    position: relative;
+    bottom: 250px;
     left: -50px;
     transition: 1s;
 }
-/* top 0 et left -50 pour que les icones se trouvent à coté de l'image, elles disparaissent grace au overflow hidden du parent */
+/* bottom 250 et left -50 pour que les icones se trouvent à coté de l'image, elles disparaissent grace au overflow hidden du parent */
 
 
-.team-picture img{
+.picture-network img{
     padding: 5% 5%;
     width: 200px;
+    height: 200px;
     border-radius: 50%;
     filter: grayscale(1);
     transition: 1s;
@@ -215,7 +218,7 @@ input[type="submit"]{
     text-align: center;
 }
 
-.card-header>p, #team-description>p, h5+p{
+.team-card>p, #team-description>p{
     opacity: 0.5;
 }
 
@@ -233,12 +236,73 @@ input[type="submit"]{
 
     /* effets sur les photos et sur les icones des reseaux sociaux */
 
-.team-picture:hover img {
+.picture-network:hover img {
     transform: scale(1.1);
     filter: grayscale(0);
 }
 
-.card-header:hover .team-network{
-    left: 5px;
-    top: 100px;
+.picture-network:hover .team-network{
+    bottom: 150px;
+    left: 10px;
+}
+
+/* -------------------------------quatrième section PARALLAX----------------------------- */
+
+#parallax{
+    padding: 10% 5%;
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)) ,url("./parallax.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#parallax h3, #parallax p{
+    padding: 1% 0;
+    color: white;
+}
+
+button{
+    margin: 5% 0 0 0;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px 5px 5px 5px ;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    transition: 0.5s;
+}
+/* effet sur le bouton */
+
+button:hover{
+    background-color: white;
+    color: black;
+    transform: translateY(-5px);
+    
+
+}
+
+/* -------------------------------------cinquième section blog------------------------- */
+
+#our-blog{
+    text-align: center;
+    padding: 8% 2%;
+}
+
+#blog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.card-blog{
+    text-align: center;
+    padding: 2% 0;
+}
+.card-blog img{
+    height: 75%;
+    width: 75%;
+    border-radius: 5px ;
 }
