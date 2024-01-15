@@ -26,10 +26,21 @@ header{
 }
 nav ul{
     display: flex;
+    list-style-type: none;
+
 }
 nav li{
     padding: 0 2%;
+    display: inline;
 }
+
+nav a, .network i {
+    text-decoration: none;
+    color: white;
+    opacity: 1;
+    font-size: 1.3em;
+}
+
 
 .network{
     display: flex;
@@ -39,18 +50,6 @@ nav li{
 .network a{
     padding: 0 15%;
 
-}
-nav ul {
-    list-style-type: none;
-}
-ul a, .network i {
-    text-decoration: none;
-    color: white;
-    opacity: 1;
-}
-
-nav li {
-    display: inline;
 }
 
 /* --------------------------HOME CONTAINER---------------------- */
@@ -84,22 +83,23 @@ h2, #home-startup p{
     justify-content: space-between;
     opacity: 0.8;
     background-color: white;
-    border-radius: 25px 25px 25px 25px;
+    border-radius: 25px;
     padding: 1% 1%;
 }
 input[type="text"]{
     padding: 2%;
-    border-radius: 25px 25px 25px 25px;
+    border-radius: 25px;
     border: none;
     outline: none;
 
 }
-input[type="submit"]{
+.subscribe button{
     background: #1294b8 ;
     color: white;
     border: none;
     padding: 2% 2%;
-    border-radius: 25px 25px 25px 25px;
+    border-radius: 25px;
+    transition: 0.5s;
 }
 
 
@@ -115,11 +115,16 @@ input[type="submit"]{
 
 /* -------------------effets visuels-------------------------- */
 
-.network i:hover, nav li:hover, input[type='submit']:hover {
+.subscribe button:hover {
     opacity: 0.5;
 }
-
-.network i, li, input {
+.network i:hover{
+    opacity: 0.5;
+}
+nav a:hover{
+    opacity: 0.5;
+}
+.network i, nav a {
     transition: 0.5s;
 }
 
@@ -203,7 +208,7 @@ input[type="submit"]{
     left: -30px;
     transition: 1s;
 }
-/* bottom 170 et left -50 pour que les icones se trouvent à coté de l'image, elles disparaissent grace au overflow hidden du parent */
+/* bottom 170 et left -30 pour que les icones se trouvent à coté de l'image, elles disparaissent grace au overflow hidden du parent */
 
 
 .picture-network img{
@@ -213,8 +218,8 @@ input[type="submit"]{
     border-radius: 50%;
     filter: grayscale(1);
     transition: 1s;
-}
 
+}
 
 .team-card p, .team-card h4, .team-card h5{
     text-align: center;
@@ -269,7 +274,7 @@ input[type="submit"]{
     margin: 5% 0 0 0;
     width: 120px;
     height: 40px;
-    border-radius: 5px 5px 5px 5px ;
+    border-radius: 5px;
     cursor: pointer;
     color: white;
     background-color: transparent;
@@ -282,15 +287,223 @@ input[type="submit"]{
     background-color: white;
     color: black;
     transform: translateY(-5px);
-    
-
 }
 
-/* --------------------------------------------------------------------------------cinquième section blog--------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------cinquième section review client------------------------------------ */
+
+#review{
+    text-align: center;
+    padding: 8% 2%;
+}
+
+#review-client{
+    display: flex;
+    justify-content: space-evenly;
+}
+#review-client img{
+    width: 100px;
+    height: 100px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+#review h3, #review p{
+    padding: 2% 35%;
+}
+
+#review h3{
+    font-size: xx-large;
+}
+#review p, #review-client img{
+    opacity: 0.5;
+}
+
+#review-client img:hover{
+    opacity: 1;
+}
+
+
+/* --------------------------------------------------------------------------------sixieme section pricing--------------------------------------------------- */
+
+#pricing{
+    background-color: #f3f3f3;
+    padding: 2% 3%;
+}
+
+#our-pricing{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+    padding: 2% 3%;
+    gap: 10vw;
+}
+#pricing-description{
+    font-size: large;
+    padding-top: 40px;
+    flex: 1;
+}
+
+#pricing-design{
+    flex: 1;
+}
+
+#pricing-design img {
+    width: 80%;
+    height: 50%;
+}
+
+.pricing-number{
+    display: flex;
+}
+
+#our-pricing h3{
+    font-weight: bolder;
+    padding: 0 0 2vh 0;
+}
+#our-pricing h4{
+    padding: 3vh 0 1vh 0;
+}
+
+#our-pricing button{
+    margin: 3vh 0;
+    padding: 1% 2%;
+    background-color: #5a8fff;
+    color: white;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border: 1px solid #5a8fff;
+}
+
+.number{
+    padding: 0 3% 0 0;
+}
+#pricing-description>p{
+    opacity: 0.5;
+}
+
+/* -------------------------pricing card--------------- */
+
+#pricing-header{
+    text-align: center;
+    padding: 0 0 4% 0;
+}
+#pricing-header h3{
+    font-size: x-large;
+}
+
+
+#cards{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pricing-card, .pricing-card-sale{
+    padding: 2% 2%;
+    background-color: white;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 15px;
+    overflow: hidden;
+}
+
+
+.pricing-card ul, .pricing-card-sale ul{
+    list-style-type: none;
+}
+
+.service{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6% 0;
+}
+
+
+
+i[class="fa-regular fa-circle-check"]{
+    color: green;
+}
+
+i[class="fa-regular fa-circle-xmark"]{
+    color: red;
+}
+
+.left-side>li{
+    text-align: start;
+}
+.left-side i{
+    position: relative;
+    top: 3px;
+    margin: 0 5px 0 0;
+}
+.right-side>li{
+    text-align: end;
+}
+
+
+
+.pricing-card button, .pricing-card-sale button{
+    margin: 8% 0 3% 0;
+    padding: 1% 2%;
+    background-color: #5a8fff;
+    color: white;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    border: 1px solid #5a8fff;
+}
+
+.pricing-card-sale{
+    position: relative;
+    top: -15px;
+}
+
+#sale{
+    background-color: #3373f9;
+    color: white;
+    width: 20%;
+    height: 15%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 10px;
+}
+
+#sale p{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 5%;
+    opacity: 0.8;
+}
+
+.price{
+    font-size: 50px;
+    color: #5a8fff;
+}
+
+.dollar{
+    font-size: 25px;
+}
+
+.month{
+    opacity: 0.8;
+    position: relative;
+    top: 35px;
+}
+/* --------------------------------------------------------------------------------septieme section blog--------------------------------------------------- */
 
 #our-blog{
     text-align: center;
-    padding: 8% 2%;
+    padding: 5% 2%;
 }
 
 #blog{
@@ -380,142 +593,90 @@ input[type="submit"]{
     opacity: 1;
 }
 
-/* --------------------------------------------------------------------------------sixième section pricing--------------------------------------------------- */
+/* ----------------------------------------------------------footer------------------------------------ */
 
-#pricing{
-    background-color: #f3f3f3;
-    padding: 2% 3%;
+#footer{
+    padding: 2% 0;
 }
 
-#our-pricing{
+#footer-network, #footer-network a{
     display: flex;
     justify-content: center;
-    align-items: start;
-    width: 100%;
-    height: 100%;
-    padding: 2% 3%;
-    gap: 10vw;
-}
-#pricing-description{
-    font-size: large;
-    flex: 1;
 }
 
-#pricing-design{
-    flex: 1;
+#footer, footer{
+    background-color: black;
+
 }
 
-#pricing-design img {
-    width: 80%;
-    height: 50%;
-}
-
-.pricing-number{
-    display: flex;
-}
-
-#our-pricing h3{
-    font-weight: bolder;
-    padding: 0 0 2vh 0;
-}
-#our-pricing h4{
-    padding: 3vh 0 1vh 0;
-}
-
-#our-pricing button{
-    margin: 3vh 0;
-    padding: 1% 2%;
-    background-color: #5a8fff;
-    color: white;
-    width: 120px;
-    height: 40px;
-    border-radius: 5px 5px 5px 5px;
-    cursor: pointer;
-    border: 1px solid #5a8fff;
-}
-
-.number{
-    padding: 0 3% 0 0;
-}
-#pricing-description>p{
-    opacity: 0.5;
-}
-
-/* -------pricing card---- */
-
-#pricing-header{
-    text-align: center;
-    padding: 0 0 4% 0;
-}
-#pricing-header h3{
-    font-size: x-large;
-}
-
-
-#cards{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.pricing-card, .pricing-card-sale{
-    padding: 2% 2%;
-    background-color: white;
-    width: 300px;
-    height: 400px;
-    text-align: center;
-    align-items: center;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 15px;
-}
-.pricing-card ul, .pricing-card-sale ul{
+#footer-network a, #footer-terms a, #footer-terms li, footer p {
+    text-decoration: none;
     list-style-type: none;
-}
-
-.service{
-    display: flex;
-    justify-content: space-between;
-}
-
-.service li{
-    display: flex;
-    /* align-items: center; */
-}
-
-i[class="fa-regular fa-circle-check"]{
-    color: green;
-}
-
-i[class="fa-regular fa-circle-xmark"]{
-    color: red;
-}
-
-/* .right-size>li{
-    text-align: end;
-} possible si service li pas en flex */
-
-.pricing-card button, .pricing-card-sale button{
-    margin: 3vh 0;
-    padding: 1% 2%;
-    background-color: #5a8fff;
     color: white;
-    width: 100%;
+    opacity: 0.6;
+}
+
+
+#footer-network a{
+    color: white;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid white;
+    width: 40px;
     height: 40px;
-    border-radius: 5px 5px 5px 5px;
+    margin: 0 1% ;
+}
+
+footer{
+    text-align: center;
+    padding: 1% 0;
+}
+
+#footer-terms li {
+    display: inline;
+    padding: 0 1%;
+}
+#footer-terms{
+    text-align: center;
+}
+
+#footer-network{
+    padding: 0 0 2% 0;
+}
+
+/* ------------------------scroll to the top ------------------------------ */
+
+html{
+    scroll-behavior: smooth;
+}
+
+#scroll a{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    position: fixed;
+    text-decoration: none;
+    bottom: 40px;
+    right: 20px;
+    background-color: #000;
+    width: 50px;
+    height: 50px;
+    color: #fff;
     cursor: pointer;
-    border: 1px solid #5a8fff;
+    border-radius: 50%;
+    opacity: 0.8;
 }
 
-.pricing-card-sale{
-    position: relative;
-}
-#sale{
-    background-color: #5a8fff;
-    width: 20%;
-    height: 15%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-radius: 0 0 0 10px;
 
-}
+ /* ==========================================================================version mobile====================================================================== */
+
+ @media screen and (max-width: 500px){
+    
+    #wrapper{
+        padding: 0;
+        flex-direction: column;
+        display: inline-flex;
+        align-items: stretch;
+    }
+
+ }
