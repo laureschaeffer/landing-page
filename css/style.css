@@ -678,5 +678,57 @@ html{
         display: inline-flex;
         align-items: stretch;
     }
+    
+    nav ul{
+        display: inline-flex;
+        flex-direction: column;
+    }
 
+    #home-container{
+        flex-direction: column;
+    }
+
+    #features{
+        flex-direction: column;
+    }
+    #team{
+        flex-direction: column;
+    }
+    .team-card{
+        padding: 2% 0;
+    }
+    .team-network{
+        display: inline-flex;
+        position: static;
+    }
+    .team-network a{
+        font-size: 1.3em;
+    }
+    #review h3, #review p{
+        padding: 1%;
+    }
+
+    #our-pricing{
+        flex-direction: column;
+    }
+    #cards{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-card-sale{
+        top:0;
+    }
+    #blog{
+        flex-direction: column;
+    }
+    .user, .time{
+        opacity: 1;
+        color: black;
+    }
+    #scroll a{
+        width: 35px;
+        height: 35px;
+        right: 10px;
+    }
  }
