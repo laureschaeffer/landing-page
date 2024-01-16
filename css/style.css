@@ -24,24 +24,28 @@ header{
     align-items: center;
 
 }
-nav ul{
-    display: flex;
-    list-style-type: none;
 
-}
-nav li{
-    padding: 0 2%;
-    display: inline;
-}
-
-nav a, .network i {
-    text-decoration: none;
-    color: white;
+.network i {
     opacity: 1;
     font-size: 1.3em;
+    color: white;
 }
 
+.topnav .icon {
+    display: none;
+  }
 
+
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.3em;
+  } 
+  
 .network{
     display: flex;
     justify-content: center;
@@ -91,6 +95,7 @@ input[type="text"]{
     border-radius: 25px;
     border: none;
     outline: none;
+    width: 100%;
 
 }
 .subscribe button{
@@ -377,6 +382,7 @@ nav a:hover{
     border-radius: 5px 5px 5px 5px;
     cursor: pointer;
     border: 1px solid #5a8fff;
+    transition: 1s;
 }
 
 .number{
@@ -450,17 +456,32 @@ i[class="fa-regular fa-circle-xmark"]{
 
 
 
-.pricing-card button, .pricing-card-sale button{
+.pricing-card button{
+    margin: 8% 0 3% 0;
+    padding: 1% 2%;
+    background-color: #fff;
+    color: #5a8fff;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #5a8fff;
+    transition: 1s;
+}
+
+.pricing-card-sale button{
     margin: 8% 0 3% 0;
     padding: 1% 2%;
     background-color: #5a8fff;
     color: white;
     width: 100%;
     height: 40px;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 5px;
     cursor: pointer;
     border: 1px solid #5a8fff;
+    transition: 1s;
 }
+
 
 .pricing-card-sale{
     position: relative;
@@ -481,7 +502,7 @@ i[class="fa-regular fa-circle-xmark"]{
 #sale p{
     text-align: center;
     font-size: 15px;
-    margin-top: 5%;
+    margin-top: 10%;
     opacity: 0.8;
 }
 
@@ -492,6 +513,9 @@ i[class="fa-regular fa-circle-xmark"]{
 
 .dollar{
     font-size: 25px;
+    color: #5a8fff;
+    position: relative;
+    top: 10px;
 }
 
 .month{
@@ -499,6 +523,25 @@ i[class="fa-regular fa-circle-xmark"]{
     position: relative;
     top: 35px;
 }
+
+/* -----effets visuels------------ */
+.pricing-card-sale button:hover{
+    background-color: white;
+    color: #5a8fff;
+    transform: translateY(-5px);
+}
+.pricing-card button:hover{
+    background-color: #5a8fff;
+    color: white;
+    transform: translateY(-5px);
+
+}
+#our-pricing button:hover{
+    background-color: white;
+    color: #5a8fff;
+    transform: translateY(-5px);
+}
+
 /* --------------------------------------------------------------------------------septieme section blog--------------------------------------------------- */
 
 #our-blog{
@@ -609,7 +652,7 @@ i[class="fa-regular fa-circle-xmark"]{
 
 }
 
-#footer-network a, #footer-terms a, #footer-terms li, footer p {
+#footer-network a, #footer-terms a, footer p {
     text-decoration: none;
     list-style-type: none;
     color: white;
@@ -644,6 +687,14 @@ footer{
     padding: 0 0 2% 0;
 }
 
+/* --------effets visuels------------- */
+#footer-network a:hover{
+    opacity: 1;
+}
+
+#footer-terms a:hover{
+    opacity: 1;
+}
 /* ------------------------scroll to the top ------------------------------ */
 
 html{
@@ -671,35 +722,94 @@ html{
  /* ==========================================================================version mobile====================================================================== */
 
  @media screen and (max-width: 500px){
-    
+  
     #wrapper{
-        padding: 0;
-        flex-direction: column;
-        display: inline-flex;
-        align-items: stretch;
+        padding: 1% 2%;
     }
-    
-    nav ul{
-        display: inline-flex;
+    .network{
+        display: none;
+    }
+
+/* --navbar fermee-- */
+
+    #MyTopnav .icon{
+        display: block;
+        float: right;
+        color: #010101;
+        font-size: 30px;
+
+    }
+    .topnav a{
+        padding: 10px 5px;
+    }
+    .topnav a:not(:first-child){
+        display: none;
+    }
+
+    /* --navbar ouverte-- */
+
+    .navbarResponsive{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+        border-radius: 3px;
+    }
+
+    .navbarResponsive .icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+        float: right;
+        color: #010101;
+        font-size: 30px;
+
+    }
+
+
+    .navbarResponsive a{
+        text-decoration: none;
+        color: black;
+        float: none;
+        display: block;
+        text-align: left;
+        font-size: 1.3em;
+        padding: 10px 5px;
+    }
+    .navbarResponsive a:not(:last-child){
+        border-bottom: 1px solid rgb(136, 133, 133);
+    }
+
+    header{
+        display: block;
+    }
+
+    h1{
+        display: flex;
+        justify-content: center;
+        font-size: xx-large;
+    }
+
+
+    nav ul, #home-container, #features, #team, #our-pricing, #cards, #blog{
         flex-direction: column;
     }
 
-    #home-container{
-        flex-direction: column;
+    .products-card, .pricing-card, .pricing-card-sale{
+        width: 100%;
     }
 
-    #features{
-        flex-direction: column;
-    }
-    #team{
-        flex-direction: column;
-    }
     .team-card{
         padding: 2% 0;
     }
+
     .team-network{
-        display: inline-flex;
+        display: flex;
+        justify-content: center;
         position: static;
+        padding: 2vh;
     }
     .team-network a{
         font-size: 1.3em;
@@ -707,28 +817,38 @@ html{
     #review h3, #review p{
         padding: 1%;
     }
-
-    #our-pricing{
+    #review-client{
         flex-direction: column;
     }
+
+
     #cards{
-        flex-direction: column;
         align-items: center;
     }
 
     .pricing-card-sale{
         top:0;
     }
-    #blog{
-        flex-direction: column;
-    }
+
     .user, .time{
         opacity: 1;
         color: black;
+    }
+
+    .card-blog figcaption{
+        text-align: left;
+        position: static;
+        color: white;
+        padding-top: 0;
+        padding-left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+
     }
     #scroll a{
         width: 35px;
         height: 35px;
         right: 10px;
     }
- }
+ } 

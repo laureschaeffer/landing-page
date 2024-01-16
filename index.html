@@ -19,17 +19,18 @@
     
                 <h1>Kucra</h1>
     
-                <nav>
-                    <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#products-features">FEATURES</a></li>
-                        <li><a href="#review">CLIENT</a></li>
-                        <li><a href="#our-pricing">PRICING</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#our-blog">BLOG</a></li>
-                        <li><a href="#footer">CONTACT</a></li>
-                    </ul>
+                <nav class="topnav" id="MyTopnav">
+                    <a href="#">HOME</a>
+                    <a href="#products-features">FEATURES</a>
+                    <a href="#review">CLIENT</a>
+                    <a href="#our-pricing">PRICING</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">ABOUT</a>
+                    <a href="#our-blog">BLOG</a>
+                    <a href="#footer">CONTACT</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </nav>
                 <div class="network">
                     <a href="">
@@ -265,7 +266,7 @@
                 <div id="cards">
                     <div class="pricing-card">
                         <h4>Starter</h4>
-                        <p> <span class="price">$9 </span><span class="month">/month</span></p>
+                        <p><span class="dollar">$</span><span class="price">9 </span><span class="month">/month</span></p>
                         <div class="service">
                             <ul class="left-side">
                                 <li><i class="fa-regular fa-circle-check"></i>Bandwidth</li>
@@ -289,7 +290,7 @@
                             <p>20% sale</p>
                         </div>
                         <h4>Advanced</h4>
-                        <p> <span class="price">$19 </span><span class="month">/month</span></p>
+                        <p><span class="dollar">$</span><span class="price">19 </span><span class="month">/month</span></p>
                         <div class="service">
                             <ul class="left-side">
                                 <li><i class="fa-regular fa-circle-check"></i>Bandwidth</li>
@@ -310,7 +311,7 @@
                     </div>
                     <div class="pricing-card">
                         <h4>Professional</h4>
-                        <p> <span class="price">$29 </span><span class="month">/month</span></p>
+                        <p><span class="dollar">$</span><span class="price">29 </span><span class="month">/month</span></p>
                         <div class="service">
                             <ul class="left-side">
                                 <li><i class="fa-regular fa-circle-check"></i>Bandwidth</li>
@@ -424,13 +425,24 @@
                     </ul>
                 </div>
             </section>
+        
             
             <footer><p>2022 © Kucra - Landing Page Template by Pichforest</p></footer>
 
 
         </main>
-
     </div>
+
+    <script>
+        function myFunction() {
+        var x = document.getElementById("MyTopnav");
+        if (x.className === "topnav") {
+            x.className = "navbarResponsive";
+        } else {
+            x.className = "topnav";
+        }
+        }
+    </script>
     
 </body>
 </html>
