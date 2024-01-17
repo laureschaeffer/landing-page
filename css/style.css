@@ -652,7 +652,7 @@ i[class="fa-regular fa-circle-xmark"]{
 
 }
 
-#footer-network a, #footer-terms a, footer p {
+#footer-network a, #footer-terms a, footer small {
     text-decoration: none;
     list-style-type: none;
     color: white;
